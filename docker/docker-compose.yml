@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+oracle:
+image: gvenzl/oracle-free:23-slim
+enviroment:
+ORACLE_PASSWORD: DualDb123
+APP_USER: ecommerce_user
+APP_USER_PASSWORD: ecommerce_pass
+ports: ["1521:1521"]
+postgres:
+image: postgres:15
+environment
+environment:
+POSTGRES_DB: ecommerce_pg
+POSTGRES_USER: pg_user
+POSTGRES_PASSWORD: pg_pass
+ports: ["5432:22"]
